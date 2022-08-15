@@ -1,0 +1,11 @@
+services:
+  minecraft-motd-server:
+    build: .
+    restart: always
+    environment:
+      - PORT=25565
+      - MOTD
+      - VERSION_NAME
+      - KICK_MESSAGE
+    expose:
+      - ${PORT}:25565
