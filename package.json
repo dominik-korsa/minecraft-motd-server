@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/cli.js",
     "dev": "nodemon src/cli.js",
+    "build-image": "docker build -t dominikkorsa/minecraft-motd-server .",
     "test": "jest"
   },
   "author": "Dominik Korsa <dominik.korsa@gmail.com> (https://github.com/dominik-korsa)",
