@@ -8,5 +8,5 @@ services:
       - VERSION_NAME
       - KICK_MESSAGE
       - HOST
-    expose:
+    ports:
       - ${PORT}:25565
