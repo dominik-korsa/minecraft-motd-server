@@ -4,7 +4,7 @@ async function main() {
   const config = Object.fromEntries(
     ['PORT', 'MOTD', 'VERSION_NAME', 'KICK_MESSAGE']
       .map((key) => {
-        if (!process.env[key]) throw new Error(`Env variable ${key} not set`)
+        if (process.env[key] === undefined) throw new Error(`Env variable ${key} not set`)
         return [key, process.env[key]]
       })
   );
