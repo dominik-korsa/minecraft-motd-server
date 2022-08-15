@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/cli.js",
     "dev": "nodemon src/cli.js",
-    "test": "jest --detect-open-handles"
+    "test": "jest"
   },
   "author": "Dominik Korsa <dominik.korsa@gmail.com> (https://github.com/dominik-korsa)",
   "license": "MIT",
