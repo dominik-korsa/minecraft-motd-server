@@ -15,6 +15,7 @@ async function main() {
     motd: config.MOTD,
     versionName: config.VERSION_NAME,
     kickMessage: config.KICK_MESSAGE,
+    host: process.env.HOST,
   });
   console.log('> Server listening on port', port);
 }

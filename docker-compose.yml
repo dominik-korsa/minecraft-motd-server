@@ -7,5 +7,6 @@ services:
       - MOTD
       - VERSION_NAME
       - KICK_MESSAGE
+      - HOST
     expose:
       - ${PORT}:25565

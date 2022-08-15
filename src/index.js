@@ -1,6 +1,6 @@
 const mc = require('minecraft-protocol');
 
-function startServer({port, motd, versionName, kickMessage}) {
+function startServer({port, motd, versionName, kickMessage, host}) {
   return new Promise((resolve, reject) => {
     console.log('Server starting...');
     const server = mc.createServer({
@@ -10,6 +10,7 @@ function startServer({port, motd, versionName, kickMessage}) {
       maxPlayers: 0,
       hideErrors: true,
       kickTimeout: 10000,
+      host: host || '0.0.0.0',
       beforePing: (response) => {
         response.version = {name: versionName, protocol: -1};
         return response;
